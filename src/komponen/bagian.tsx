@@ -232,7 +232,7 @@ export function PanelMasalah({ ringkasan }: { ringkasan: Ringkasan }) {
       <div className="kartu">
         <h2>Rincian masalah</h2>
         <div className="pesan info" style={{ color: 'var(--hijau)', borderColor: 'rgba(104,211,145,.4)', background: 'rgba(104,211,145,.1)' }}>
-          ✓ Tidak ada masalah yang terdeteksi dengan pengaturan saat ini.
+          Tidak ada masalah yang terdeteksi dengan pengaturan saat ini.
         </div>
       </div>
     )
@@ -318,12 +318,26 @@ export function PanelPratinjau({
 }
 
 /* ------------------------------------------------------------------ */
+/* Ikon garis (SVG) — konsisten, tanpa emoji                           */
+/* ------------------------------------------------------------------ */
+export function IkonGembok({ ukuran = 14 }: { ukuran?: number }) {
+  return (
+    <svg width={ukuran} height={ukuran} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ verticalAlign: '-2px' }}>
+      <rect x="4" y="11" width="16" height="10" rx="2" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </svg>
+  )
+}
+
+/* ------------------------------------------------------------------ */
 /* Kaki halaman                                                        */
 /* ------------------------------------------------------------------ */
 export function Kaki() {
   return (
     <div className="kaki">
-      <div className="aman">🔒 Seluruh pemeriksaan berjalan di peramban Anda</div>
+      <div className="aman">
+        <IkonGembok /> Seluruh pemeriksaan berjalan di peramban Anda
+      </div>
       <div style={{ marginTop: 6 }}>
         CEKDATA — dibuat oleh{' '}
         <a href="https://aldiyonatan.vercel.app" target="_blank" rel="noreferrer">

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 
 import {
   AreaUnggah,
+  IkonGembok,
   Kaki,
   PanelMasalah,
   PanelOpsi,
@@ -117,7 +118,9 @@ export default function App() {
           <h1 className="judul">CEKDATA</h1>
           <p className="sub">Periksa kualitas berkas CSV sebelum diolah — langsung di peramban.</p>
         </div>
-        <div className="lencana">🔒 100% lokal</div>
+        <div className="lencana">
+          <IkonGembok ukuran={12} /> 100% lokal
+        </div>
       </div>
 
       {galat && <div className="pesan galat">{galat}</div>}
